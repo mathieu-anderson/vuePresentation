@@ -1,0 +1,29 @@
+<template>
+  <div id="app">
+    <img src="./assets/logo.png">
+    <h1 v-on:click="reload()">tasteFight</h1>
+    <searchMovie></searchMovie>
+  </div>
+</template>
+
+<script>
+import searchMovie from './components/searchMovie'
+
+export default {
+  name: 'app',
+  components: {
+    searchMovie
+  }
+}
+</script>
+
+<style>
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+</style>
