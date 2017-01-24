@@ -1,8 +1,7 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
     <h1 v-on:click="reload()">tasteFight</h1>
-    <searchMovie></searchMovie>
+      <searchMovie></searchMovie>
   </div>
 </template>
 
@@ -18,6 +17,12 @@ export default {
 </script>
 
 <style>
+
+img {
+  max-width: 35vw;
+  min-width: 200px;
+}
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

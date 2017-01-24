@@ -1,7 +1,7 @@
 <template lang="html">
   <div>
     <form
-      v-show="showForm"
+      v-if="showForm"
       v-on:submit.prevent="onSubmit">
         <input
         type="text"
@@ -14,7 +14,7 @@
         v-show="showForm"
         v-on:keyup.enter="submit">
     </form>
-    <chooseMovie></chooseMovie>
+    <chooseMovie v-if="showList" v-bind:api_res_movie_list="api_res_movie_list"></chooseMovie>
   </div>
 </template>
 
@@ -24,7 +24,6 @@
 
   export default {
     name: 'searchMovie',
-    props: ['api_res_movie_list', 'showList'],
     components: {
       chooseMovie
     },
@@ -44,10 +43,12 @@
             const movieList = res.data.results.slice(0, 5)
             if (movieList.length === 0) {
               alert('nothing found :(')
-              this.reload()
+              // this.reload()
             } else {
               this.api_res_movie_list = movieList
             }
+          })
+          .then(() => {
             this.showForm = false
             this.showList = true
           })
@@ -63,4 +64,5 @@
 </script>
 
 <style lang="css">
+
 </style>
