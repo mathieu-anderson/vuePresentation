@@ -144,14 +144,6 @@
   max-width: 50%;
 }
 
-.big {
-  font-size: 14pt;
-}
-
-.pointer {
-  cursor: pointer;
-}
-
 ul  {
   list-style: none;
 }

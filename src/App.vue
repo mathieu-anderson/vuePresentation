@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <h1 v-on:click="reload()">tasteFight</h1>
+    <h1 class="pointer"
+    v-on:click="reload()">tasteFight
+    </h1>
       <searchMovie></searchMovie>
   </div>
 </template>
@@ -18,9 +20,12 @@ export default {
 
 <style>
 
-img {
-  max-width: 35vw;
-  min-width: 200px;
+.big {
+  font-size: 14pt;
+}
+
+.pointer {
+  cursor: pointer;
 }
 
 #app {
