@@ -1,5 +1,6 @@
 <template lang="html">
   <div>
+
       <div class="api_res_list Aligner" v-show="showList">
         <span class="big Aligner-item">Did you mean ...</span>
           <br />
@@ -17,11 +18,15 @@
       </div>
 
       <seeMovie v-if="showAPIRes"
-      v-bind:api_res_name='api_res_name'
-      v-bind:api_res_overview='api_res_overview'
-      v-bind:api_res_poster='api_res_poster'
-      v-bind:api_res_ID='api_res_ID'>
+        v-bind:showAPIRes='showAPIRes'
+        v-bind:api_res_name='api_res_name'
+        v-bind:api_res_overview='api_res_overview'
+        v-bind:api_res_poster='api_res_poster'
+        v-bind:api_res_ID='api_res_ID'
+        v-bind:TMDB_api_key='TMDB_api_key'>
       </seeMovie>
+
+  <div>
 </template>
 
 <script>
