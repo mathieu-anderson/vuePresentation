@@ -16,10 +16,16 @@
 </script>
 
 <style>
+
+  h1 {
+    text-decoration: overline;
+    font-weight: lighter;
+    font-size: 4em;
+  }
+
   #app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     text-align: center;
     color: #2c3e50;
-    margin-top: 60px;
   }
 </style>

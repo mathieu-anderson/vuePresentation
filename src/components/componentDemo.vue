@@ -4,7 +4,7 @@
     <input v-model="message">
     <button v-on:click="renderComponent">Render conditional component</button>
     <conditionalComponent
-    v-if="render"
+    v-if="renderConditionalComponent"
     v-bind:conditionalMessage="conditionalMessage"
     />
   </div>
@@ -20,13 +20,13 @@ export default {
   data () {
     return {
       message: 'V-model is awesome',
-      render: false,
-      conditionalMessage: 'Here I am!'
+      renderConditionalComponent: false,
+      conditionalMessage: 'The condition is fulfilled, and so am I!'
     }
   },
   methods: {
     renderComponent: function () {
-      this.render = !this.render
+      this.renderConditionalComponent = !this.renderConditionalComponent
     }
   }
 }
