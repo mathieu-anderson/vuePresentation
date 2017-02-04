@@ -6,10 +6,10 @@
 
 <script>
 export default {
-  name: 'conditional component',
+  name: 'conditionalComponent',
+  props: ['conditionalMessage'],
   data () {
     return {
-      conditionalMessage: 'Here I am!'
     }
   }
 }
