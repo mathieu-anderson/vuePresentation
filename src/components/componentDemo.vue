@@ -3,32 +3,31 @@
     <p>{{ message }}</p>
     <input v-model="message">
     <button v-on:click="renderComponent">Render conditional component</button>
-    <!-- <conditionalComponent
+    <conditionalComponent
     v-if="renderConditionalComponent"
-    v-bind:conditionalMessage="conditionalMessage"
-    /> -->
+    />
   </div>
 </template>
-<!-- v-bind:conditionalMessage="message" -->
+<!-- v-bind:conditionalMessage="conditionalMessage" -->
 
 <script>
-// import conditionalComponent from './conditionalComponent'
+import conditionalComponent from './conditionalComponent'
 export default {
   name: 'componentDemo',
-  // components: {
-  //   conditionalComponent
-  // },
+  components: {
+    conditionalComponent
+  },
   data () {
     return {
       message: 'V-model is awesome',
-      // renderConditionalComponent: false,
-      // conditionalMessage: 'The condition is fulfilled, and so am I!'
+      renderConditionalComponent: false,
+      conditionalMessage: 'Condition fulfilled!'
     }
   },
   methods: {
-    // renderComponent: function () {
-    //   this.renderConditionalComponent = !this.renderConditionalComponent
-    // }
+    renderComponent: function () {
+      this.renderConditionalComponent = !this.renderConditionalComponent
+    }
   }
 }
 </script>
