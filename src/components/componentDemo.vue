@@ -5,10 +5,10 @@
     <button v-on:click="renderComponent">Render conditional component</button>
     <conditionalComponent
     v-if="renderConditionalComponent"
+    v-bind:conditionalMessage="conditionalMessage"
     />
   </div>
 </template>
-<!-- v-bind:conditionalMessage="conditionalMessage" -->
 
 <script>
 import conditionalComponent from './conditionalComponent'

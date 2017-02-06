@@ -21,6 +21,7 @@ module.exports = {
     'no-undef': 0,
     'handle-callback-err': 0,
     'comma-dangle': 0,
-    'indent': 0
+    'indent': 0,
+    'no-trailing-spaces': 0
   }
 }
